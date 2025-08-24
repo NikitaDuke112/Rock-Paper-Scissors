@@ -2,9 +2,7 @@ package com.game.rps.service;
 
 import com.game.rps.dto.Amount;
 import com.game.rps.dto.Currency;
-import com.game.rps.dto.Player;
 import com.game.rps.exceptions.NoCurrencyException;
-import com.game.rps.exceptions.NoHandException;
 import com.game.rps.exceptions.NotEnoughtMoney;
 
 import java.util.Scanner;
@@ -37,7 +35,7 @@ public class BillingService {
                 break;
             default:
                     throw new NoCurrencyException("There is no such currency");
-        };
+        }
         sc.nextLine();
 
         return new Amount(amount, currency);

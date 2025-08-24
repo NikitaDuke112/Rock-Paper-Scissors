@@ -39,7 +39,7 @@ public class Main {
             System.out.println("Player hand: " + player.getHand());
             System.out.println("Computer hand: " + computer.getHand());
 
-            gameResult = gameService.checkWinner(player, computer);
+            gameResult = gameService.checkWinner(player.getHand(), computer.getHand());
 
             if (gameResult.equals(GameResult.PLAYER)) {
                 player.increaseWinGame();
